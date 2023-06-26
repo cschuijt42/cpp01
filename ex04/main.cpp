@@ -43,7 +43,7 @@ int	main(int ac, char **av)
 	// if they match, the replaced line gets added to the output buffer.
 	while (true)
 	{
-		getline(input, input_line);
+		std::getline(input, input_line);
 		if (input.eof() && input_line.empty())
 			break;
 		if (input_line.compare(to_replace) == 0)
