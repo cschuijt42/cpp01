@@ -23,11 +23,11 @@ ifeq ($(UNAME_S), Darwin)
 else
 	COMPIL_FLAGS	?= -Wall -Wextra -Werror -std=c++17 -lstdc++
 endif
-INCLUDE_FLAGS		?= 
+INCLUDE_FLAGS		?=
 
 SOURCEFILES	:=	main.cpp
 
-HEADER	:=	
+HEADER	:=
 
 OFILES	:=	$(SOURCEFILES:.cpp=.o)
 # SRC_DIR	:=	src

@@ -10,10 +10,9 @@ int	main()
 			  << "String    : " << &string    << "\n"
 			  << "Pointer   : " << &stringPTR << "\n"
 			  << "Reference : " << &stringREF << "\n" << std::endl;
-	
+
 	std::cout << "Values:\n"
 			  << "String    : " << string     << "\n"
 			  << "Pointer   : " << *stringPTR << "\n"
 			  << "Reference : " << stringREF  << std::endl;
-
 }
