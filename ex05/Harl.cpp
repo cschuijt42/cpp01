@@ -2,25 +2,15 @@
 #include <iostream>
 
 void Harl::complain(std::string level) {
-	char first = std::toupper(level[0]);
-	switch (first)
-	{
-	case 'D':
-		this->debug();
-		break;
-	case 'I':
-		this->info();
-		break;
-	case 'W':
-		this->warning();
-		break;
-	case 'E':
-		this->error();
-		break;
-	default:
-		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
-		break;
+	size_t num_complaints = sizeof(complaints) / sizeof(complaint);
+
+	for (size_t i = 0; i < num_complaints; i++) {
+		if (level == complaint_strs[i]) {
+			(this->*complaints[i])();
+			return;
+		}
 	}
+	std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 }
 
 void Harl::debug(void) {
