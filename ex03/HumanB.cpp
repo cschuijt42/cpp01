@@ -3,7 +3,8 @@
 
 HumanB::HumanB(std::string name)
 {
-	HumanB::name = name;
+	HumanB::name   = name;
+	HumanB::weapon = nullptr;
 }
 
 void	HumanB::setWeapon(Weapon &weapon_ref)
@@ -14,6 +15,7 @@ void	HumanB::setWeapon(Weapon &weapon_ref)
 void	HumanB::attack()
 {
 	std::cout << name
-			  << " attacks with their " 
-			  << weapon->getType()      << std::endl;
+			  << " attacks with their "
+			  << (weapon ? weapon->getType() : "bare hands")
+			  << std::endl;
 }
